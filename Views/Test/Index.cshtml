@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js"></script>
+    <script>
+        function fun(event) {
+            event.preventDefault();
+        }
+    </script>
+</head>
+
+<h1>Index</h1>
+<form asp-controller="Test" asp-action="Index" method="post">
+    姓名：<input type="text" value="gamecc666" name="name" />
+    性别：<input type="text" value="男" name="gender" />
+    <input type="submit" value="提交">
+    @*
+    <input type="button" value="取消" />                            ----方法一
+    <input type="reset" value="取消" />                             ----方法二
+    <input type="submit" value="取消" onclick="fun(event)" />       ----方法三
+    <input type="submit" value="取消" onclick="return false" />     ----方法四
+    <input type="submit" value="取消" onsubmit="return false" />    ----方法五
+    *@
+</form>
+
